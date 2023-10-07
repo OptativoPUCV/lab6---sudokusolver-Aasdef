@@ -55,13 +55,12 @@ List* get_adj_nodes(Node* n){
   //recorrer matriz de 9x9
   for(int i=0;i<9;i++){
     for (int j=0; j<9;j++){
+      //si esta vacía se llena con un numero
       if(n->sudo[i][j]==0){
-
-        for(int var=1;var<=9;var++){
-          Node*nuevo=copy(n);
-          nuevo->sudo[i][j]=var;
-          
-        }
+        Node* nuevo=createNode();
+        memcpy(nuevo->sudo, n->sudo, 9*9*sizeof(int));
+        
+        pushBack(list, nuevo);
       }
     }
   }
