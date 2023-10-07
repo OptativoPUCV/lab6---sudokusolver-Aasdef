@@ -50,8 +50,22 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+  //Cree una función que a partir de un nodo genere una lista con los nodos adyacentes
+  List* list=createList();
+  //recorrer matriz de 9x9
+  for(int i=0;i<9;i++){
+    for (int j=0; j<9;j++){
+      if(n->sudo[i][j]==0){
+
+        for(int var=1;var<=9;var++){
+          Node*nuevo=copy(n);
+          nuevo->sudo[i][j]=var;
+          
+        }
+      }
+    }
+  }
+  return list;
 }
 
 
