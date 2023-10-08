@@ -16,3 +16,17 @@ Sun 08 Oct 2023 12:03:45 AM UTC:
  tests:  0|5
 total_score: 0/70
 1e7d80b
+Sun 08 Oct 2023 12:09:56 AM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:109:29: error: array subscript -1 is below array bounds of ‘int[9]’ [-Werror=array-bounds]
+  109 |       nuevo->sudo[filaVacia][coluVacia]=numero;
+      |       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+00fae10
