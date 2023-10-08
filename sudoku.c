@@ -100,9 +100,16 @@ List* get_adj_nodes(Node* n){
         break;
       }
     }
+    if (filaVacia != -1 && coluVacia != -1) {
+      break;
+    }  
   }
 
-  if (filaVacia!=-1 &&coluVacia!=-1){
+  if (filaVacia == -1 || coluVacia == -1) {
+  return list;
+  }
+  
+  if (filaVacia!=-1 && coluVacia!=-1){
     //buscar numeros vacios 
     for (int numero=1; numero<=9;numero++){
       Node*nuevo=copy(n);
