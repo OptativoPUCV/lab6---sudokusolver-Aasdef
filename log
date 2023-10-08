@@ -30,3 +30,17 @@ sudoku.c:7:8: note: while referencing ‘sudo’
 cc1: all warnings being treated as errors
 Compilation failed
 00fae10
+Sun 08 Oct 2023 12:12:55 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:110:31: error: array subscript -1 is below array bounds of ‘int[9]’ [-Werror=array-bounds]
+  110 |         nuevo->sudo[filaVacia][coluVacia]=numero;
+      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6e509f6
