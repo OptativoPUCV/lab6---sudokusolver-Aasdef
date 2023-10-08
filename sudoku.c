@@ -106,12 +106,9 @@ List* get_adj_nodes(Node* n){
     //buscar numeros vacios 
     for (int numero=1; numero<=9;numero++){
       Node*nuevo=copy(n);
-      if(is_valid(nuevo)){
-        nuevo->sudo[filaVacia][coluVacia]=numero;
-        pushBack(list, nuevo);
-      }else{
-        free(nuevo);
-      }
+      nuevo->sudo[filaVacia][coluVacia]=numero;
+      pushBack(list, nuevo);
+      
     }
   }
   return list;
